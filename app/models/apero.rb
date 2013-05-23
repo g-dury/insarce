@@ -2,6 +2,7 @@ class Apero < ActiveRecord::Base
   
   belongs_to :user
   belongs_to :category
+  has_one :lieu
   attr_accessible :category_id, :content, :date, :hour, :name, :user_id, :visibility
 
   validate :visibility, :presence => true
@@ -12,7 +13,7 @@ class Apero < ActiveRecord::Base
   		errors.add(:date, "can't be in the past")
   	end
   end
-  
+
  
 
   

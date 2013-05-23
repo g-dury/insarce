@@ -3,7 +3,9 @@ Insarce2::Application.routes.draw do
 
   get "home/index"
 
-  resources :aperos
+  resources :aperos do 
+    resources :lieus
+  end
 
 
   # The priority is based upon order of creation:
